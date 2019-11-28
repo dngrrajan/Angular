@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon">
+    <title>SMAT</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/jquery.dataTables.min.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/sugarrush.css" rel="stylesheet" type="text/css">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/signature-pad.css"> 
+	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+  </head>
+
+  <body class="">
+    <div class="animsition">  
+        <main id="playground">
+
+            
+        <!-- - - - - - - - - - - - - -->
+        <!-- start of TOP NAVIGATION -->
+        <!-- - - - - - - - - - - - - -->
+        <nav class="navbar navbar-top navbar-static-top">
+          <div class="container-fluid">
+
+            <!-- sidebar collapse and toggle buttons get grouped for better mobile display -->
+            <div class="navbar-header nav">
+			<div class="logo" style="height:50px;">
+				<img src="images/logo3.png" style="width:150px;position:relative;top:-2px;right:16px;"> <p style="display:inline-block;position:relative;right:29px;top:10px;color:navy;font-weight:bold;">MEDI SERVICES</p><p style="font-size:10px;position:relative;right:-224px;top:-24px;color:navy;font-weight:bold;">(JM0420614 - V)</p>
+			</div>
+                <button type="button" onclick="window.history.go(-1); return false;" style="position:absolute;top:14px;right:50px;"><i class="fa fa-reply" aria-hidden="true"></i></button>
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top" style="position:absolute;right:0;top:0;">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand show-hide-sidebar hide-sidebar" href="#"><i class="fa fa-outdent"></i></a>
+              <a class="navbar-brand show-hide-sidebar show-sidebar" href="#"><i class="fa fa-indent"></i></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-top">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown user-profile">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Master&nbsp;<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="superadmin.html">Superadmin Details</a></li>
+					<li><a href="customer_details.html">Customer Details</a></li>
+                    <li><a href="spareparts_details.html">Spare Parts</a></li>
+                    <li><a href="machine_details.html">Machine Details</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown user-profile">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    Employee&nbsp;<span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="employee_details.html">Employee Details</a></li>
+                    <li><a href="employee_rights.html">Employee Rights</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown user-profile">
+                  <a href="invoice.html">
+                    Service Report
+                  </a>
+                </li>
+                <li class="dropdown user-profile">
+                    <a href="last_invoice_grid.html">
+                        Report
+                    </a>
+                </li>
+				<li class="dropdown user-profile">
+                  <a href="logout.html">
+                    Log Out
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- end of navbar-collapse -->
+          </div>
+          <!-- end of container-fluid -->
+        </nav>
+
+        <!-- - - - - - - - - - - - - -->
+        <!-- end of TOP NAVIGATION   -->
+        <!-- - - - - - - - - - - - - -->
+
+
+        
+ 
+        <div class="container-fluid">
+
+          <!-- Forms -->
+              <section class="panel">
+			<div class="col-md-12">
+				<header class="panel-heading">
+                  <h3 class="panel-title">Work Details</h3>
+                </header>
+            </div>
+			<form id="frmSignIn3" method="POST" action="" name="frmSignIn3">
+			<div class="panel-body">
+			<div class="col-sm-6">
+					  <div class="form-group">
+                        <label for="exampleInputName2">Signature :</label>
+                        <div id="signature-pad" class="signature-pad">
+							<div class="signature-pad--body">
+							  <canvas id="signpad"></canvas>
+							</div>
+							<div id="signpad123">
+							
+							</div>
+							<div class="signature-pad--footer">
+							  <div class="signature-pad--actions">
+								<div>
+								  <button type="button" class="button" data-action="undo"></button>
+								</div>
+								<div>
+								  <button type="button" class="button clear btn-clear" data-action="clear" style="color:#000;font-weight:bold;">Clear</button>
+								</div>
+							  </div>
+							</div>
+						</div>
+						<input type="hidden" class="form-control masked-input" name="signdecode" id="signdecode">
+						<input type="hidden" class="form-control masked-input" name="ranjith3" id="ranjith3">
+						<input type="hidden" class="form-control masked-input" name="imgdecode" id="imgdecode" placeholder="Name">
+                      </div>
+					  <button type="submit"  name="submit3" id="submit3" class="btn btn-default">Save</button>
+					  <button type="submit"  id="submit31" class="btn btn-default">Save</button>
+			</div>
+			<div class="col-sm-6">
+					  <input type="hidden" class="form-control masked-input" name="lastid2" id="lastid2">
+			</div>
+			</div>
+			</form>
+              </section> <!-- / section -->
+
+
+
+        </div> <!-- / container-fluid -->
+
+<div class="modal fade"  id="myModal2"  data-backdrop="static" data-keyboard="false"  role="dialog" aria-labelledby="#myModal" aria-hidden="true" style="z-index:999999;">
+  <div class="modal-dialog modal-sm">
+
+    <!-- Modal content-->
+    <div class="modal-content my-modal-style" id="close" style="border-radius:0px!important;margin-top:200px;">
+      <div class="modal-header"style="background-color:#2A3F54;color:#fff;padding:5px;text-align:center;">
+        
+        <h4 class="modal-title" style="color:#fff;"><b>Message</b></h4>
+      </div>
+      <div class="modal-body text-center"style="margin-top:0px;padding:0px;"> 
+		
+		<h5 id="popup_msg1" style="font-size:12px;font-weight:bold;padding:12px;"></h5>
+		
+		<div class="modal-footer"style="padding:5px;">
+		<button type="button" class="close" data-dismiss="modal"style="border:1px solid gray;background-color:#2A3F54;color:#fff;padding:5px;font-size:10px;opacity:1.0;">OK</button>
+		</div>
+		
+		
+		
+		
+		
+		
+								</div>
+							</div>
+						</div>   
+  </div>
+<div class="modal fade"  id="myModal2"  data-backdrop="static" data-keyboard="false"  role="dialog" aria-labelledby="#myModal" aria-hidden="true" style="z-index:999999;">
+  <div class="modal-dialog modal-sm">
+
+    <!-- Modal content-->
+    <div class="modal-content my-modal-style" id="close" style="border-radius:0px!important;margin-top:200px;">
+      <div class="modal-header"style="background-color:#2A3F54;color:#fff;padding:5px;text-align:center;">
+        
+        <h4 class="modal-title" style="color:#fff;"><b>Message</b></h4>
+      </div>
+      <div class="modal-body text-center"style="margin-top:0px;padding:0px;"> 
+		
+		<h5 id="popup_msg" style="font-size:12px;font-weight:bold;padding:12px;"></h5>
+		
+		<div class="modal-footer"style="padding:5px;">
+		<button type="button" class="close" data-dismiss="modal"style="border:1px solid gray;background-color:#2A3F54;color:#fff;padding:5px;font-size:10px;opacity:1.0;">OK</button>
+		</div>
+		
+		
+		
+		
+		
+		
+								</div>
+							</div>
+						</div>   
+  </div>
+<div class="preloader" id="preloader" style="position:fixed;top:270px;text-align:center;">
+			<img src="images/loader.gif" style="width:15%;height:6%"/>
+			</div>
+
+      <!--<footer>
+        <p style="font-size:13px">Powered by <a href="#" style="color:#bd5151;font-size:13px;">KR Global Systems</a></p>
+      </footer>-->
+
+
+    </main> <!-- /playground -->
+
+    <div class="scroll-top">
+      <i class="ti-angle-up"></i>
+    </div>
+  </div> <!-- /animsition -->
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/signature_pad.umd.js"></script>
+  <script src="js/app.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/jquery.animsition.min.js"></script>
+  <script src="js/jquery.dataTables.min.js"></script>
+  <script src="js/sugarrush.tables.js"></script>
+  <script src="js/includes.js"></script>
+  <script src="js/sugarrush.js"></script>
+    <script src="js/url.js"></script>
+  <!---<script type="text/javascript" src="js/datepicker/daterangepicker.js"></script>-->
+  <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+  <!--<script type="text/javascript" src="js/jquery-1.8.3.min.js" charset="UTF-8"></script>-->
+<script type="text/javascript" src="js/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+<script type="text/javascript">
+    $('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+	$('.form_date').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+	$('.form_time').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 1,
+		minView: 0,
+		maxView: 1,
+		forceParse: 0
+    });
+</script>
+  <script>
+	$(document).ready(function(){
+	$("#preloader").hide();	
+	$("#sdt").datepicker({ dateFormat: 'dd/mm/yy', changeYear:true,changeMonth: true, yearRange: "-100:+100" });
+	$("#edt").datepicker({ dateFormat: 'dd/mm/yy', changeYear:true,changeMonth: true, yearRange: "-100:+100" });
+	$("#date").datepicker({ dateFormat: 'dd/mm/yy', changeYear:true,changeMonth: true, yearRange: "-100:+100" });
+	$("#sdate").datepicker({ dateFormat: 'dd/mm/yy', changeYear:true,changeMonth: true, yearRange: "-100:+100" });
+	sessionStorage.getItem("session");
+	//alert(sessionStorage.session);
+	var ran=sessionStorage.session;
+	if(!sessionStorage.session){
+		  window.location.href="index.html";
+		}
+	function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+	var id=getUrlVars()["id"];
+	//alert(id);
+	$("#lastid2").val(id);
+				$.ajax({
+		
+							type: "POST",
+							url: appurl+"phpservices/superadmin_autobind.php",
+							dataType:'JSON',
+							data: {data1:ran},
+							success: function(result) {
+					$("#ranjith3").val(result.ranjith);
+					}
+					});
+					
+	
+					
+					
+					
+					
+					
+					
+					
+	
+	$("#submit3").click(function(e){
+						$("#preloader").show();
+							e.preventDefault();
+					var canvas = document.getElementById("signpad");
+					var data = canvas.toDataURL("image/png"); 
+					$("#signdecode").val(data);
+					setTimeout(function(){	
+							$.ajax({
+							type:'POST',
+							data:$("#frmSignIn3").serialize(),
+							url: appurl+'phpservices/work_details_insert2.php',
+							dataType: 'JSON',
+							success: function(result) {
+									//alert(result.op);
+										if(result.op==1){
+										$("#preloader").hide();	
+										
+	$.ajax({
+							type:'POST',
+							data:$("#frmSignIn3").serialize(),
+							url: appurl+'phpservices/image_decode.php',
+							dataType: 'JSON',
+							success: function(result) {
+								//alert(result.op5);
+								if(result.op==1){
+								//window.location='invoice_form.html';
+								}
+							},
+							error:function(xhr,status,error){
+									//alert(xhr.reponseText);			
+											},
+											async:false
+		});
+										//$("#empselect,#designation").val("");
+												$("#popup_msg1").html('signature SAVED SUCCESSFULLY');
+												$('#myModal2').modal('show');
+												$(".close").click(function(e){
+												window.location.href ='invoice_form.html?id='+id;
+												//location.reload();
+												});
+												//location.reload();
+												}
+												else{
+												$("#popup_msg1").html('NOT SAVED SUCCESSFULLY');	
+												}
+											},
+											error:function(xhr,status,error){
+												
+											},
+											async:false
+
+						});		
+					});	
+	});
+	
+	
+			$.ajax({
+			type:'POST',
+			url: appurl+'phpservices/signature_update_autobind.php',
+			dataType: 'JSON',
+			data:{data1:id},
+			success: function(result) {
+			var img=result.op;
+			if(img==""){
+			$("#signpad").show();
+			$("#signpad123").hide();
+			$("#submit3").show();
+			$("#submit31").hide();
+			}
+			else{
+			$("#signpad").hide();
+			$("#signpad123").show();
+			$("#submit3").hide();
+			$("#submit31").show();
+			$("#signpad123").html('<img  src="'+appurl+'images/invoice_img/img'+id+'.png" style="width:200px;height:50px;" />');
+			}
+			$("#signdecode").val(result.signidname);
+
+			},
+			error:function(xhr,status,error){
+				alert(xhr.responseText);
+			}
+	});			
+					
+					
+					
+	$(".btn-clear").click(function(){
+	$("#signpad").show();
+	$("#signpad123").hide();
+	$("#submit3").show();
+	$("#submit31").hide();
+	});
+	
+	
+	$("#submit31").click(function(e){
+	e.preventDefault();
+	window.location.href="invoice_form.html?id="+id;
+	});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	});
+	</script>
+    <script>
+	$(document).click(function (event) {
+    var clickover = $(event.target);
+    var $navbar = $(".navbar-collapse");               
+    var _opened = $navbar.hasClass("in");
+    if (_opened === true && !clickover.hasClass("navbar-toggle")) {      
+        $navbar.collapse('hide');
+    }
+});
+  </script>
+    <script>
+  var originalHeight = document.documentElement.clientHeight;
+var originalWidth = document.documentElement.clientWidth;
+$(window).resize(function() {
+    // Control landscape/portrait mode switch
+    if (document.documentElement.clientHeight == originalWidth &&
+         document.documentElement.clientWidth == originalHeight) {
+        originalHeight = document.documentElement.clientHeight;
+        originalWidth = document.documentElement.clientWidth;
+    }
+    // Check if the available height is smaller (keyboard is shown) so we hide the footer.
+   if (document.documentElement.clientHeight < originalHeight) {
+       $('footer').hide();
+   } else {
+       $('footer').show();
+   }
+});
+  </script>
+  </body>
+</html>
